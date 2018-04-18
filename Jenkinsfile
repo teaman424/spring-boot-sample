@@ -18,5 +18,10 @@ pipeline {
         archiveArtifacts 'target/spring-boot-sample-data-rest-0.1.0.jar'
       }
     }
+    stage('end') {
+      steps {
+        sh 'mvn spring-boot:run'
+      }
+    }
   }
 }
