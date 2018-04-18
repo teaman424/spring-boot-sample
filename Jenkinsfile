@@ -18,9 +18,9 @@ pipeline {
         archiveArtifacts 'target/spring-boot-sample-data-rest-0.1.0.jar'
       }
     }
-    stage('end') {
+    stage('deploy') {
       steps {
-        sh 'mvn spring-boot:run'
+        sh 'make deploy-default'
       }
     }
   }
